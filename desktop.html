@@ -7,8 +7,595 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="desktop.css">
     <title>Login Page</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    .main{
+        height: 93vh;
+        width: 100%;
+        background-image: url(image-1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .twitter{
+        height: 93vh;
+        width: 100%;
+        background-image: url(Screenshot\ \(38\).png);
+        background-size: 100% 100%;
+        display: none;
+    }
+    .cover{
+        height: 86vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .login{
+        height: 80vh;
+        width: 40%;
+        background-color: white;
+        float: left;
+        margin-left: 30%;
+        margin-top: 3vh;
+        border-radius: 10px;
+        position: relative;
+    }
+    .cut{
+        height: 4vh;
+        width: 5%;
+        float: left;
+        position: absolute;
+        left: 2%;
+        top: 2vh;
+        border-radius: 50%;
+    }
+    .cut:hover{
+        background-color: rgb(192, 189, 189);
+        color: black;
+    }
+    .cut-1{
+        height: 50%;
+        width: 50%;
+        background-image: url(close-line.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 6px;
+    }
+    .cut-2{
+        height: 4vh;
+        width: 5%;
+        float: left;
+        position: absolute;
+        left: 2%;
+        top: 2vh;
+        border-radius: 50%;
+    }
+    .cut-2:hover{
+        background-color: rgb(192, 189, 189);
+        color: black;
+    }
+    .cut-3{
+        height: 50%;
+        width: 50%;
+        background-image: url(close-line.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 6px;
+    }
+    .twtlogo{
+        height: 5vh;
+        width: 12%;
+        margin: auto;
+        margin-top: 2vh;
+        background-image: url(twt\ logo.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .twtlogo-1{
+        height: 5vh;
+        width: 10vh;
+        margin: auto;
+        margin-top: 2vh;
+        background-image: url(twt\ logo.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 30vh;
+    }
+    .heading{
+        height: 8vh;
+        width: 40%;
+        font-size: 1.5rem;
+        font-family: 'Readex Pro', sans-serif;
+        font-weight: 800;
+        margin-left: 26%;
+        margin-top: 3vh;
+    }
+    .heading-1{
+        height: 8vh;
+        width: 60%;
+        font-size: 1.5rem;
+        font-family: 'Readex Pro', sans-serif;
+        font-weight: 800;
+        margin-left: 8%;
+        margin-top: 8vh;
+    }
+    .box{
+        height: 5vh;
+        width: 50%;
+        border: 1px solid grey;
+        border-radius: 40px;
+        margin: auto;
+        background-image: url(googleicon.png);
+        background-size: 15% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: 'Readex Pro', sans-serif;
+        cursor: pointer;
+    }
+    .box:hover{
+        background-color: rgba(179, 250, 243, 0.4);
+    }
+    .box-1{
+        height: 5vh;
+        width: 50%;
+        border: 1px solid grey;
+        border-radius: 40px;
+        margin: auto;
+        margin-top: 3vh;
+        background-image: url(appleicon.jpg);
+        background-size: 15% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: 'Readex Pro', sans-serif;
+        cursor: pointer;
+    }
+    .box-1:hover{
+        background-color: rgba(207, 204, 204, 0.4);
+    }
+    .gap{
+        height: 0.1vh;
+        width: 80%;
+        background-color: grey;
+        margin: auto;
+        margin-top: 2vh;
+    }
+    .userid{
+        height: 6vh;
+        width: 50%;
+        border: 1px solid grey;
+        font-size: 20px;
+        margin-top: 2vh;
+        margin-left: 25%;
+        text-align: center;
+    }
+    .pass{
+        height: 6vh;
+        width: 50%;
+        border: 1px solid grey;
+        font-size: 20px;
+        margin-top: 2vh;
+        margin-left: 25%;
+        text-align: center;
+    }
+    .submit{
+        height: 4vh;
+        width: 50%;
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        margin: auto;
+        margin-top: 3vh;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: 'Readex Pro', sans-serif;
+        cursor: pointer;
+    }
+    .submit:hover{
+        background-color: rgba(58, 57, 57,0.9);
+    }
+    .forgot{
+        height: 4vh;
+        width: 50%;
+        border: 1px solid grey;
+        border-radius: 40px;
+        margin: auto;
+        margin-top: 3vh;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: 'Readex Pro', sans-serif;
+        cursor: pointer;
+    }
+    .forgot:hover{
+        background-color: rgba(211, 209, 209, 0.9);
+    }
+    .rgst{
+        height: 4vh;
+        width: 50%;
+        margin: auto;
+        margin-top: 6vh;
+        margin-left: 16%;
+        text-align: center;
+        font-size: 1rem;
+        font-family: 'Readex Pro', sans-serif;
+    }
+    .signup{
+        font-size: 1rem;
+        font-family: 'Readex Pro', sans-serif;
+        text-decoration: underline;
+        cursor: pointer;
+        color: blue;
+    }
+    .name{
+        height: 8vh;
+        width: 90%;
+        border: 1px solid grey;
+        font-size: 20px;
+        margin-top: 0;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .phone{
+        height: 8vh;
+        width: 90%;
+        border: 1px solid grey;
+        font-size: 20px;
+        margin-top: 2vh;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .email{
+        height: 4vh;
+        width: 30%;
+        font-family: 'Readex Pro', sans-serif;
+        font-size: 1.2rem;
+        color: blue;
+        margin-top: 2vh;
+        margin-left: 5%;
+        text-align: left;
+        cursor: pointer;
+    }
+    .email:hover{
+        text-decoration: underline;
+    }
+    .dob{
+        height: 4vh;
+        width: 50%;
+        font-family: 'Readex Pro', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 200;
+        margin-top: 2vh;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .dob-1{
+        height: 8vh;
+        width: 90%;
+        font-family: 'Readex Pro', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 200;
+        margin-top: 5vh;
+        margin-left: 5%;
+        text-align: center;
+    }
+    .description{
+        height: 4vh;
+        width: 90%;
+        font-family: 'Readex Pro', sans-serif;
+        font-size: 0.9rem;
+        color: grey;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .submit-1{
+        height: 8vh;
+        width: 90%;
+        background-color: black;
+        color: white;
+        font-family: 'Readex Pro', sans-serif;
+        border-radius: 40px;
+        margin: auto;
+        margin-top: 4vh;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Readex Pro', sans-serif;
+        cursor: pointer;
+    }
+    .submit-1:hover{
+        background-color: rgba(58, 57, 57,0.9);
+    }
+    .header{
+        height: 7vh;
+        width: 100%;
+        background-color: rgb(63, 188, 238);
+    }
+    .close{
+        height: 4vh;
+        width: 2%;
+        float: right;
+    }
+    .close:hover{
+        background-color: red;
+        color: black;
+    }
+    .close-1{
+        height: 50%;
+        width: 50%;
+        background-image: url(close-line.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 8px;
+    }
+    .slideshow{
+        height: 4vh;
+        width: 2%;
+        float: right;
+        right: 2.5%;
+    }
+    .slideshow:hover{
+        background-color: grey;
+        color: black;
+    }
+    .slideshow-1{
+        height: 50%;
+        width: 50%;
+        background-image: url(slideshow-line.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 8px;
+    }
+    .mini{
+        height: 4vh;
+        width: 2%;
+        float: right;
+        right: 5%;
+    }
+    .mini:hover{
+        background-color: grey;
+        color: black;
+    }
+    .mini-1{
+        height: 5%;
+        width: 50%;
+        background-image: url(minus-line.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 18px;
+    }
+    .logo{
+        height: 6.5vh;
+        width: 10%;
+        background-image: url(download.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        float: left;
+        margin-top: 0.25vh;
+        margin-left: 1%;
+        cursor: pointer;
+    }
+    .register{
+        height: 80vh;
+        width: 40%;
+        background-color: white;
+        float: left;
+        margin-left: 30%;
+        margin-top: 3vh;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 10vh;
+        display: none;
+    }
+    .footer{
+        height: 7vh;
+        width: 100%;
+        background-color: grey;
+        position: relative;
+    }
+    .searchbox{
+        height: 7vh;
+        width: 16.5%;
+        position: absolute;
+        text-align: center;
+        font-size: 20px;
+    }
+    .search{
+        height: 4vh;
+        width: 2%;
+        position: absolute;
+        left: 17%;
+        top: 2vh;
+        background-image: url(search.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .search:hover{
+        height: 3.5vh;
+        width: 1.5%;
+    }
+    .edge{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 20%;
+        top: 2vh;
+        background-image: url(edge-browser.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .edge:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .mail{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 25%;
+        top: 2vh;
+        background-image: url(email-verification.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .mail:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .chrome{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 30%;
+        top: 2vh;
+        background-image: url(google-chrome.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .chrome:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .skype{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 35%;
+        top: 2vh;
+        background-image: url(skype.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .skype:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .wp{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 40%;
+        top: 2vh;
+        background-image: url(wa-whatsapp.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .wp:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .twt{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 45%;
+        top: 2vh;
+        background-image: url(twitter-app.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .twt:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .fb{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 50%;
+        top: 2vh;
+        background-image: url(facebook-app.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .fb:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .instagram{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        left: 55%;
+        top: 2vh;
+        background-image: url(instagram-square-color.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .instagram:hover{
+        height: 3.5vh;
+        width: 2.5%;
+    }
+    .battery{
+        height: 2vh;
+        width: 2%;
+        position: absolute;
+        right: 17%;
+        top: 3vh;
+        background-image: url(battery-level-full.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .wifi{
+        height: 2vh;
+        width: 2%;
+        position: absolute;
+        right: 14%;
+        top: 3vh;
+        background-image: url(wifi.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .sound{
+        height: 2vh;
+        width: 2%;
+        position: absolute;
+        right: 11%;
+        top: 3vh;
+        background-image: url(sound.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    .time{
+        height: 4vh;
+        width: 6%;
+        position: absolute;
+        right: 4%;
+        top: 2vh;
+        cursor: pointer;
+    }
+    .mssg{
+        height: 4vh;
+        width: 3%;
+        position: absolute;
+        right: 1%;
+        top: 2vh;
+        background-image: url(mobile-no-signal.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    </style>
 </head>
 <body>
     <div class="main">
