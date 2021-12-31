@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="desktop.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="main">
+        <div class="twitter" id="tid">
+            <!-- header -->
+        <div class="header">
+            <div class="logo"></div>
+            <div class="close" onclick="document.getElementById('tid').style.display='none'">
+                <div class="close-1"></div>
+            </div>
+            <div class="slideshow">
+                <div class="slideshow-1"></div>
+            </div>
+            <div class="mini">
+                <div class="mini-1"></div>
+            </div>
+        </div>
+        <!-- login page -->
+        <div class="cover">
+            <div class="login">
+                <div class="cut" onclick="document.getElementById('tid').style.display='none'">
+                <div class="cut-1"></div></div>
+                <div class="twtlogo"></div>
+                <div class="heading">Sign in to Twitter</div>
+                <div class="box">Sign in with Google</div>
+                <div class="box-1">Sign in with Apple</div>
+                <div class="gap"></div>
+                <input type="text" class="userid" name="email" placeholder="Phone, email, or username">
+                <input type="password" class="pass" name="pass" placeholder="Password">
+                <div class="submit">Next</div>
+                <div class="forgot">Forgot password?</div>
+                <div class="rgst">Don't have an account?<span class="signup" onclick="document.getElementById('sign').style.display='block'">Sign up</span></div>
+            </div>
+        </div>
+        <!-- registeration page -->
+        <div class="register" id="sign">
+            <div class="cut-2" onclick="document.getElementById('sign').style.display='none'">
+                <div class="cut-3"></div></div>
+                <div class="twtlogo-1"></div>
+                <div class="heading-1">Create your account</div>
+                <p><input class="name" type="text" name="name" placeholder="Name"></p>
+                <p><input class="phone" type="text" name="phone" placeholder="Phone"></p>
+                <div class="email">Use email instead</div>
+                <div class="dob">Date of birth</div>
+                <div class="description">This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</div>
+                <p><input class="dob-1" type="date" name="dob"></p>
+                <div class="submit-1">NEXT</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div><input type="text" class="searchbox" name="search bar" placeholder="Type here to search"></div>
+        <div class="search"></div>
+        <div class="edge"></div>
+        <div class="mail"></div>
+        <div class="chrome"></div>
+        <div class="skype"></div>
+        <div class="wp"></div>
+        <div class="twt" onclick="document.getElementById('tid').style.display='block'"></div>
+        <div class="fb"></div>
+        <div class="instagram"></div>
+        <div class="battery"></div>
+        <div class="sound"></div>
+        <div class="wifi"></div>
+        <div class="time">11:00<br>14-12-2021</div>
+        <div class="mssg"></div>
+    </div>
+</body>
+</html>
